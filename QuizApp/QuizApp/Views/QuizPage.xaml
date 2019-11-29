@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="QuizApp.Views.QuizPage">
+
+    <StackLayout Padding="20" 
+                 VerticalOptions="Center">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="{Binding Question}"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"/>
+
+            <!--<Label Text="{Binding Answer1}"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   HorizontalOptions="End"/>
+            <Label Text="{Binding Answer2}"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"/>
+            <Label Text="{Binding Answer3}"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   HorizontalOptions="Start"/>
+
+            <Entry Text="{Binding Answer}"
+                   Placeholder="Enter answer here" 
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+            
+            <Button Text="Submit"
+                    Command="{Binding SubmitAnswerCommand}"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    CornerRadius="15"
+                    BackgroundColor="LightGray"/>-->
+            
+            <Button Text="{Binding Answer1}"
+                    Command="{Binding SubmitAnswer1Command}"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    CornerRadius="15"
+                    BackgroundColor="LightGray"/>
+
+            <Button Text="{Binding Answer2}"
+                    Command="{Binding SubmitAnswer2Command}"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    CornerRadius="15"
+                    BackgroundColor="LightGray"/>
+
+            <Button Text="{Binding Answer3}"
+                    Command="{Binding SubmitAnswer3Command}"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    CornerRadius="15"
+                    BackgroundColor="LightGray"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

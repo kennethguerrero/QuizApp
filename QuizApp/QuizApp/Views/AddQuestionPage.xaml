@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="QuizApp.Views.AddQuestionPage">
+
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center">
+
+        <Entry Text="{Binding Question}"
+               Placeholder="Enter question"/>
+
+        <Entry Text="{Binding Answer1}"
+               Placeholder="Enter answer 1"/>
+        <Entry Text="{Binding Answer2}"
+               Placeholder="Enter answer 2"/>
+        <Entry Text="{Binding Answer3}"
+               Placeholder="Enter answer 3"/>
+        <Entry Text="{Binding CorrectAnswer}"
+               Placeholder="Enter correct answer"/>
+
+        <Button Text="Save Question"
+                Command="{Binding SaveQuestionCommand}"
+                CornerRadius="15"
+                BackgroundColor="LightGray"/>
+
+    </StackLayout>
+  
+</ContentPage>
